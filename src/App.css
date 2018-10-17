@@ -1,12 +1,44 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
-
+body{
+  background-color: black;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
-
+.ab-controls{
+  width: 300px;
+  padding-top: 50px;
+}
+.ab-texts-continer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ab-input{
+  width: 200px;
+  height: 30px;;
+}
+.ab-label{
+  color: white;
+  text-transform: uppercase;
+  font-family: cursive;
+  padding: 20px;
+}
+.ab-canvas-container{
+  padding-top: 63px;
+}
+.ab-select{
+  width: 205px;
+  height: 36px;
+}
+.ab-canvas{
+  background: white;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -29,4 +61,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+.ab-small-canvas{
+  background: white;
+  border: black 10px solid;
+  border-bottom: none;
 }
