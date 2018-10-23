@@ -3,22 +3,22 @@ import { addElementF, addElementG, addElementX, addElementX_t, addElementTraject
 import { clearCanvas } from "../../Draw/Clear";
 import { getChart2 } from "../Charts/Chart2";
 
-let c = 10;
+let c = 1;
 let k = 1;
-let m = 10;
+let m = 1;
 let x0 = 1;
 let w = 0;// 0 - sinus, 1 - cosinus
 let x_i = 1;
-let x_i_minus_1 = 1.003;
-let delta = 0.01;
+let x_i_minus_1 = 1;
+let delta = 1;
 let x_i_plus_1;
-const g = 9.80665;
-let v0 = 0.2;
-let ht = g;
+let ht = 0;
+let v0 = 1;
 let time = 0;
+let tikingTime = 0;
 let A = 1;
-let teta = 0;
-let omega = 0;
+let teta = 1;
+let omega = 1;
 export function _setC(_c) {
     c = _c;
 }
@@ -68,6 +68,7 @@ export function setTime(_t) {
     clearX_tt()
 }
 function moveBall() { 
+    tikingTime += 0.01;
     x_i_minus_1 = time === 0 ? x0 - (delta * v0) : x_i;
     x_i = time === 0 ? x0 : x_i_plus_1;
     time ++;
@@ -75,16 +76,16 @@ function moveBall() {
     if(w === 0) {
         finalW = A;
     } else if(w === 1) {
-        finalW = Math.sign(A*Math.sin(omega * time + teta));
+        finalW = Math.sign(A*Math.sin(omega * tikingTime + teta));
     } else {
-        finalW = A*Math.sin(omega * time + teta);
+        finalW = A*Math.sin(omega * tikingTime + teta);
     }
     if(ht === 0) {
         finalH = A;
     } else if(ht === 1) {
-        finalH = Math.sign(A*Math.sin(omega * time + teta));
+        finalH = Math.sign(A*Math.sin(omega * tikingTime + teta));
     } else {
-        finalH = A*Math.sin(omega * time + teta);
+        finalH = A*Math.sin(omega * tikingTime + teta);
     }
     let X = delta * delta / m;
     let Y = k * X / (2 * delta);

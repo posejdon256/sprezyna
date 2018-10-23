@@ -64,15 +64,15 @@ export default class Controls extends Component {
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">v0</label>
-                    <input onChange={this.setV0} defaultValue="0.2" type="text" className="ab-input" />
+                    <input onChange={this.setV0} defaultValue="1" type="text" className="ab-input" />
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">delta</label>
-                    <input onChange={this.setDelta} type="text" defaultValue="0.01" className="ab-input" />
+                    <input onChange={this.setDelta} type="text" defaultValue="1" className="ab-input" />
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">m</label>
-                    <input onChange={this.setM} defaultValue="10" type="text" className="ab-input" />
+                    <input onChange={this.setM} defaultValue="1" type="text" className="ab-input" />
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">k</label>
@@ -80,7 +80,7 @@ export default class Controls extends Component {
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">c</label>
-                    <input onChange={this.setC} type="text" defaultValue="10" className="ab-input" />
+                    <input onChange={this.setC} type="text" defaultValue="1" className="ab-input" />
                 </div>
                 <div className="ab-texts-continer">
                     <label className="ab-label">h(t)</label>

@@ -67,3 +67,21 @@ body{
   border: black 10px solid;
   border-bottom: none;
 }
+.ab-first-value {
+  color: rgb(100, 100, 100);
+}
+.ab-second-value {
+  color: rgba(150, 150, 150);
+}
+.ab-third-value {
+  color: rgba(210, 210, 210);
+}
+span {
+  padding: 10px;
+}
+.ab-frame {
+  border: white 2px solid;
+  padding: 2px;
+  margin-bottom: -2px;
+  /* border-radius: 3px; */
+}

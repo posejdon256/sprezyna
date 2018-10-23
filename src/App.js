@@ -42,15 +42,39 @@ class App extends Component {
         <Canvas/>
        </div>
        <div>
-       <Chart datas1={this.state.datasF}
-               datas2={this.state.datasG}
-               datas3={this.state.datasH}
-         />
-        <Chart datas1={this.state.datasX}
-               datas2={this.state.datasX_t}
-               datas3={this.state.datasX_tt}
-         />
-        <Chart2 datas={this.state.datasTrajectory}/>
+         <div className="ab-frame">
+          <Chart datas1={this.state.datasF}
+                  datas2={this.state.datasG}
+                  datas3={this.state.datasH}
+            />
+            <span className="ab-first-value">
+              F
+            </span>
+            <span className="ab-second-value">
+              G
+            </span>
+            <span className="ab-third-value">
+              H
+            </span>
+         </div>
+         <div className="ab-frame">
+          <Chart datas1={this.state.datasX}
+                datas2={this.state.datasX_t}
+                datas3={this.state.datasX_tt}
+          />
+          <span className="ab-first-value">
+            x(t)
+          </span>
+          <span className="ab-second-value">
+            x_t
+          </span>
+          <span className="ab-third-value">
+            x_tt
+          </span>
+         </div>
+         <div className="ab-frame">
+          <Chart2 datas={this.state.datasTrajectory}/>
+        </div>
        </div>
       </div>
     );

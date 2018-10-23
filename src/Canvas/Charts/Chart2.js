@@ -18,7 +18,8 @@ export default class Chart2 extends Component {
         const canvas = this.refs.can;
         const tr = getLastTrajectory();
         if(tr && tr.length === 2) {
-            DrawLine(canvas, tr[0].x, tr[0].y, tr[1].x, tr[1].y, "rgba(0, 0, 0, 255)");
+            DrawLine(canvas, (tr[0].x / 2) + (canvas.width / 4), (tr[0].y / 2) +  (canvas.height / 4),
+             (tr[1].x / 2) + (canvas.width / 4), (tr[1].y / 2) + (canvas.height / 4), "rgba(0, 0, 0, 255)");
         }
     }
     render(){

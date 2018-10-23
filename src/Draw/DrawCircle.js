@@ -6,5 +6,5 @@ export function DrawCircle(canvas, x, y, R) {
     ctx.arc(x, y, R, 0,2*Math.PI);
     ctx.fillStyle = getStringColor();
     ctx.fill();
-    ctx.stroke();
+   // ctx.stroke();
 }
